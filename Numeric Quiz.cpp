@@ -11,7 +11,7 @@
 
 using namespace std;
 
-const int chances=10;      // this constant determines your chances of failure
+const int chances=7;      // this constant determines your chances of failure
 
 // Search a number from the head of array, the searching scope is 0 to (pos-1).Return true when exists.
 bool findterm(int array[], int size, int a, int pos){
@@ -33,7 +33,7 @@ bool comp(int *rands , int *guesses , int size){
 			}
 		}
 	}
-	if (a==3) return true;
+	if (a==size) return true;
 	else {
 		cout << a << 'A' << b << 'B' <<endl;
 		return false;
@@ -62,7 +62,10 @@ bool game(int *rands, int size){
 
 int main(){
 	srand(time(0));
-	int const size=5;          //Detemine the length of number to be guessed
+	int size;  
+	cout << "请选择数字长度："; 
+	cin  >> size;       //Detemine the length of number to be guessed
+	cout << endl << "您在每局游戏中有" << chances <<"次机会，来猜" << size <<"个数字以及它们的顺序。"
 	int *rands, rantemp, rounds=0, rounds_won=0; char ch;
 	rands= new int[size];
 	while (true) {
