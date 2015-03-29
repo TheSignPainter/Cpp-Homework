@@ -65,7 +65,7 @@ int main(){
 	int size;  
 	cout << "请选择数字长度："; 
 	cin  >> size;       //Detemine the length of number to be guessed
-	cout << endl << "您在每局游戏中有" << chances <<"次机会，来猜" << size <<"个数字以及它们的顺序。"
+	cout << endl << "您在每局游戏中有" << chances <<"次机会，来猜" << size <<"个数字以及它们的顺序。"; 
 	int *rands, rantemp, rounds=0, rounds_won=0; char ch;
 	rands= new int[size];
 	while (true) {
